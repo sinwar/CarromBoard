@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Carrom Board</title>
+</head>
+
+
+<body>
+  <div class="container">
+  	<div class="main">
+	     <canvas id="myCanvas" width="400" height="400" style="border:1px solid #FF0000;"></canvas>
+  	</div>
+  </div>
+
+
+
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  /* to draw circles */
+  ctx.beginPath();
+  ctx.arc(12.5,12.5,12.5,0,2*Math.PI);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(387.5,12.5,12.5,0,2*Math.PI);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(387.5,387.5,12.5,0,2*Math.PI);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(12.5,387.5,12.5,0,2*Math.PI);
+  ctx.stroke();
+  /* outer box*/
+  ctx.moveTo(50,50);
+  ctx.lineTo(350,50);
+  ctx.lineTo(350,50);
+  ctx.lineTo(350,350);
+  ctx.lineTo(50,350);
+  ctx.lineTo(50,50);
+  /*inner box*/
+  ctx.moveTo(70,70);
+  ctx.lineTo(330,70);
+  ctx.lineTo(330,70);
+  ctx.lineTo(330,330);
+  ctx.lineTo(70,330);
+  ctx.lineTo(70,70);
+  ctx.stroke();
+  /* diagonal lines*/
+  ctx.moveTo(30,30);
+  ctx.lineTo(140,140);
+  ctx.moveTo(370,30);
+  ctx.lineTo(260,140);
+  ctx.moveTo(370,370);
+  ctx.lineTo(260,260);
+  ctx.moveTo(30,370);
+  ctx.lineTo(140,260);
+  ctx.stroke();
+  /* all four arcs */
+  ctx.beginPath();
+  ctx.arc(130,130,15,-0.5*Math.PI,1*Math.PI);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(270,130,15,0,1.5*Math.PI);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(270,270,15,0.5*Math.PI,2*Math.PI);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(130,270,15,1*Math.PI,2.5*Math.PI);
+  ctx.stroke();
+  
+  /* red circles */
+  ctx.beginPath();
+  ctx.arc(80,60,10,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(320,60,10,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(340,80,10,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(340,320,10,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(320,340,10,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(80,340,10,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(60,320,10,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(60,80,10,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+  /* mid circles */
+  ctx.beginPath();
+  ctx.arc(200,200,45,0,2*Math.PI);
+  ctx.fillStyle='wheat';
+  ctx.fill();
+  ctx.stroke(); 
+  ctx.beginPath();
+  ctx.arc(200,200,35,0,2*Math.PI);
+  ctx.fillStyle='white';
+  ctx.fill();
+  ctx.stroke();
+  
+  ctx.beginPath();
+  ctx.arc(200,200,16,0,2*Math.PI);
+  ctx.fillStyle='red';
+  ctx.fill();
+  ctx.stroke();
+</script>
+
+</body>
